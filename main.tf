@@ -11,9 +11,10 @@ resource "helm_release" "prometheus-msteams" {
 
   values = [
     templatefile("${path.module}/prometheus_msteams_values.tpl", {
-      msteams-stag-critical-webhook = var.msteams-critical-alerts-webhook
-      msteams-stag-warning-webhook  = var.msteams-warning-alerts-webhook
-      msteams-stag-info-webhook     = var.msteams-info-alerts-webhook
+      helm_chart_image_tag = var.helm_chart_image_tag
+      msteams-critical-alerts-webhook = var.msteams-critical-alerts-webhook
+      msteams-warning-alerts-webhook  = var.msteams-warning-alerts-webhook
+      msteams-info-alerts-webhook     = var.msteams-info-alerts-webhook
     })
   ]
 }
