@@ -1,7 +1,3 @@
-######################################
-# TERRAFORM_MODULE/HELM_RELEASE
-######################################
-
 resource "helm_release" "prometheus-msteams" {
   name       = var.helm_chart_name
   repository = "https://prometheus-msteams.github.io/helm-chart/"
@@ -17,4 +13,3 @@ resource "helm_release" "prometheus-msteams" {
     })
   ]
 }
-######################################
