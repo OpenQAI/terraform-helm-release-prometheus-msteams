@@ -8,7 +8,7 @@ action "terraform validate" {
 
   # See Environment Variables below for details.
   env = {
-    TF_ACTION_WORKING_DIR = "."
+    TF_ACTION_WORKING_DIR = "../"
   }
 
   # If you need to specify additional arguments to terraform validate, add them here.
