@@ -1,2 +1,1 @@
-![.github/workflows/terraform.yml](https://github.com/OpenQAI/terraform-helm-release-prometheus-msteams/workflows/.github/workflows/terraform.yml/badge.svg)
-# terraform-helm-release-prometheus-msteams
+![Terraform CI](https://github.com/OpenQAI/terraform-helm-release-prometheus-msteams/workflows/Terraform%20CI/badge.svg?branch=master)# terraform-helm-release-prometheus-msteams
