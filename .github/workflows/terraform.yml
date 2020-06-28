@@ -1,0 +1,25 @@
+action "terraform validate" {
+  # Replace <latest tag> with the latest tag from
+  # https://github.com/hashicorp/terraform-github-actions/releases.
+  uses = "hashicorp/terraform-github-actions/validate@<latest tag>"
+
+  # `terraform validate` will always fail unless `terraform init` is run first.
+  needs = "terraform init"
+
+  # See Environment Variables below for details.
+  env = {
+    TF_ACTION_WORKING_DIR = "."
+  }
+
+  # If you need to specify additional arguments to terraform validate, add them here.
+  # Otherwise, delete this line or leave the array empty.
+  args = ["-var", "foo=bar"]
+
+  # We need the GitHub token to be able to comment back on the pull request.
+  secrets = ["GITHUB_TOKEN"]
+}
+
+action "terraform init" {
+  uses = "hashicorp/terraform-github-actions/init@<latest tag>"
+  secrets = ["GITHUB_TOKEN"]
+}
