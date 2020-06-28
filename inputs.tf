@@ -1,15 +1,15 @@
 # Helm Chart
 variable "helm_chart_version" {
-  default = 0.5.1
+  default = "0.5.1"
 }
 variable "helm_chart_name" {
-  default = prometheus_msteams
+  default = "prometheus_msteams"
 }
 variable "helm_chart_namespace" {
-  default = monitoring
+  default = "monitoring"
 }
 variable "helm_chart_image_tag" {
-  default = v1.3.5
+  default = "v1.3.5"
 }
 
 # Microsoft Teams webhooks
